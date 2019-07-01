@@ -5,21 +5,63 @@ import rigoImage from "../../img/rigo-baby.jpg";
 
 //create your first component
 export class Home extends React.Component {
+	constructor() {
+		super();
+		this.state = {
+			a: ["", "", "", "", "", "", "", "", ""],
+			b: ["", "", "", "", "", "", "", "", ""],
+			jugador: true
+		};
+	}
+	cambiarJugador() {
+		this.setState({ jugador: true });
+	}
 	render() {
 		return (
-			<div className="text-center mt-5">
-				<h1>Hello Rigo!</h1>
-				<p>
-					<img src={rigoImage} />
-				</p>
-				<a href="#" className="btn btn-success">
-					If you see this green button... bootstrap is working
-				</a>
-				<p>
-					Made by{" "}
-					<a href="http://www.4geeksacademy.com">4Geeks Academy</a>,
-					with love!
-				</p>
+			<div className="container" id="container">
+				<div className="row text-white ">
+					<div className="col-12 turno">
+						turn :{" "}
+						{this.state.jugador == true
+							? this.state.a
+							: this.state.b}
+					</div>
+					<div
+						className="col-4 a"
+						onClick={() => {
+							this.setState({
+								a: "X",
+								b: "0",
+								jugador: !this.state.jugador
+							});
+						}}>
+						{" "}
+						{this.state.jugador == true
+							? this.state.a
+							: this.state.b}
+					</div>
+					<div
+						className="col-4 a"
+						onClick={() => {
+							this.setState({
+								a: "X",
+								b: "0",
+								jugador: !this.state.jugador
+							});
+						}}>
+						{" "}
+						{this.state.jugador == true
+							? this.state.a
+							: this.state.b}
+					</div>
+					<div className="col-4 b" />
+					<div className="col-4 a" />
+					<div className="col-4 a" />
+					<div className="col-4 b" />
+					<div className="col-4 c" />
+					<div className="col-4 c" />
+					<div className="col-4 " />
+				</div>
 			</div>
 		);
 	}
