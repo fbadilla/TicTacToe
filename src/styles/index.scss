@@ -11,48 +11,24 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
-body{
-    background: black;
-    padding-top: 4rem;
+#board1
+{
+    width: 70%;
+ margin-left: 150px;
+ margin-right: 100px;
 }
-#container{
- background: grey;
-    width: 40rem;
-    height: 35rem;
-    padding-top: 1rem;
-    text-align: center;
-    font-size: 3rem;
+#board1 tr td{
+ border: 2px solid black;
+ align-content: center;
+     height: 10rem;
+    width: 10rem;
 }
-.turno{
-    text-align: center;
+#board1, tr, td{
+font-family: verdana;
+  font-size: 6rem;
+  text-align: center;
 }
-.a{
-border-style: solid;
-border-color: black;
-width: 5rem;
-height: 5rem;
-border-left: none;
-border-top: none;
-}
-.row {
-    padding: 2rem;
-}
-.b{
-border-style: solid;
-border-color: black;
-width: 5rem;
-height: 5rem;
-border-top: none;
-border-left: none;
-border-right: none;
-}
-.c{
-border-style: solid;
-border-color: black;
-width: 5rem;
-height: 5rem;
-border-top: none;
-border-left: none;
-border-bottom: none
-
+h2,h3{
+  text-align: center;
+  font-family: verdana;
 }
